@@ -80,3 +80,17 @@ supérieur ou égal à
 supérieur à
 !==
 différent de
+
+
+## Les boucles
+
+Il  existe deux principaux types de boucles :
+
+La boucle for permet de répéter du code lorsque l’on sait d’avance combien de fois il faudra le répéter.
+
+Par exemple, si nous voulons demander exactement trois fois à l’utilisateur d’entrer un mot.
+
+La boucle while permet de répéter du code autant de fois qu’il le faut pour qu’une condition ne soit plus vraie.
+
+Par exemple, si nous voulons redemander un mot à l’utilisateur jusqu’à ce que ce mot soit correct.
+
