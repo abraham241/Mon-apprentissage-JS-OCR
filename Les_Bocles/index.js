@@ -14,7 +14,7 @@ de fois jusqu’a ce que la condition soit vraie */
 //     i++
 // }
 
-const listMots = ["Cachalot", "Pétunia", "Serviette"];
+/*const listMots = ["Cachalot", "Pétunia", "Serviette"];
 
 const listePhrases = [
   "je vais le chercher",
@@ -38,7 +38,7 @@ if (choix === "mots") {
   }
   console.log("votre score est de: " + score + "sur" + listMots[i])
 } 
-else(choix === "phrases") {
+else (choix === "phrases") {
     for(let i = 0; i < length.listePhrases; i++){
         let motUtilisateur = prompt("Entrez la phrase : " + listePhrases[i]);
         if(motUtilisateur === listePhrases[i]){
@@ -46,4 +46,7 @@ else(choix === "phrases") {
         }
     }
     console.log("votre score est de: " + score + "sur" + listePhrases[i])
-}
+}*/
+
+let texte = document.getElementById("texte");
+console.log(texte);
