@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulaire</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </head>
+  <body class="flex flex-col justify-center">
+    <form action="" class="flex flex-col justify-center w-full p-4">
+      <label for="nom">Nom :</label>
+      <input
+        type="text"
+        name="nom"
+        placeholder="Votre nom"
+        value="Abraham"
+        id="nom"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+      />
+
+      <label for="email">Email :</label>
+      <input
+        type="email"
+        name="email"
+        placeholder="nom@domaine.com"
+        value=""
+        id="email"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+      />
+
+      <div>
+        <label>Préférence de couleur :</label>
+        <input type="radio" id="red" name="couleur" value="red" checked />
+        <label for="red">Rouge</label>
+        <input type="radio" id="blue" name="couleur" value="blue" />
+        <label for="blue">Bleu</label>
+        <input type="radio" id="green" name="couleur" value="green" />
+        <label for="green">Vert</label>
+      </div>
+
+      <label for="radio" class="flex w-20">radio</label>
+      <input
+        type="radio"
+        value="radio"
+        name="radio"
+        id="radio"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+      />
+      <input
+        type="radio"
+        name="radio"
+        value="radio"
+        id="radio"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+      />
+      <label for="checkbox">checkbox</label>
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="checkbox"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+        value="checkbox"
+        checked
+      />
+      <label for="select">choix :</label>
+      <select
+        name=""
+        id=""
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+        id=""
+      >
+        <option value="">Option 1</option>
+        <option value="">Option 2</option>
+        <option value="">Option 3</option>
+      </select>
+      <label for="message">Message :</label>
+      <textarea
+        name="message"
+        id="message"
+        placeholder="Votre message"
+        value=""
+        cols="30"
+        rows="10"
+        class="w-1/2 ml-2 mb-2 p-1 border border-black rounded focus:outline-none"
+      ></textarea>
+
+      <input
+        type="submit"
+        value="Envoyer"
+        id="btnEnvoyer"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      />
+    </form>
+    <!-- <div class="flex justify-start">
+      <button
+        type="submit"
+        id="btnEnvoyer"
+        class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded flex justify-center"
+      >
+        Envoyer
+      </button>
+    </div> -->
+  </body>
+</html>
