@@ -9,7 +9,6 @@ const todoNr = document.querySelector('.nrTodo b')
 
 
 
-
 // attacher un evenement a ce bouton 
 button.addEventListener("click", function (){
     // je crée l'élément que le bouton doit créer
@@ -21,7 +20,7 @@ button.addEventListener("click", function (){
     newItem.appendChild(newText);
     // j'ajoute l'élément créer a la todoList (de façon plus générale au DOM)
     todoList.appendChild(newItem);
-    todoNr.innerText = lesitems.length
+    // todoNr.innerText = lesitems.length
 })
 
 

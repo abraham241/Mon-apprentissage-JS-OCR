@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quizz des drapeaux</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div class="bg-gradient-to-r from-cyan-500 to-blue-500  h-screen flex justify-center items-center">
+        <div class="quizz-container flex flex-col justify-center items-center bg-white py-5 px-5">
+            <div class="container-question ">
+                <img id="quizz-img">
+                <P id="quizz-question">
+                    
+                </P>
+            </div>
+            <div class="container-content flex flex-col gap-2 py-5">
+                <div class="border-b">
+                    <input type="text" id="resultat" class="outline-none rounded">
+                </div>
+                <button id="next" class="bg-black text-white rounded">Suivant</button>
+            </div>
+            <p id="resultatFinal"></p>
+        </div>
+    </div>
+
+    <script src="Script.js"></script>
+</body>
+</html>
