@@ -50,14 +50,15 @@ function addTodo(event) {
 
 function deleteCheck(e) {
   const item = e.target;
-  // delete todo
-  if (item.classList[0] === "trash-btn") {
-    const todo = item.parentElement;
-    todo.classList.add("fall");
-    todo.addEventListener("transitionend", function () {
-      todo.remove();
-    });
-  }
+  if (confirm("Êtes-vous sûr de vouloir supprimer cette tâche ?"))
+    if (item.classList[0] === "trash-btn") {
+      // delete todo
+      const todo = item.parentElement;
+      todo.classList.add("fall");
+      todo.addEventListener("transitionend", function () {
+        todo.remove();
+      });
+    }
   // check mark
   if (item.classList[0] === "completed-btn") {
     const todo = item.parentElement;

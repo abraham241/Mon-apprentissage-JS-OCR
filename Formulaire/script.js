@@ -1,56 +1,34 @@
-let nomsimple = document.getElementById("nom")
-let Email = document.getElementById("email")
-let check = document.getElementById("checkbox")
-let bouton = document.getElementById("btnEnvoyerMail")
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form");
 
-// let baliseCouleur = document.querySelectorAll('input[name="couleur"]')
-// let couleur = ""
-// for (let i = 0; i < baliseCouleur.length; i++) {
-//     if (baliseCouleur[i].checked) {
-//         couleur = baliseCouleur[i].value
-//         break
-//     }
-// }
-// console.log(couleur)
+  form.addEventListener("submit", (event) => {
+    event.preventDefault(); // Empêche le rechargement de la page
 
-nomsimple = nomsimple.value
+    // Récupère les valeurs des autres champs
+    const nom = document.getElementById("nom").value;
+    const email = document.getElementById("email").value;
+    const checkbox = document.getElementById("checkbox").checked;
+    const select = document.querySelector("select").value;
+    const message = document.getElementById("message").value;
 
-nomsimple = nomsimple.addEventListener("change", function (event) {
-    event.preventDefault()
-    nomsimple = nomsimple.value
-    console.log(nomsimple)
-})
+    // Récupère tous les boutons radio avec querySelectorAll
+    const radios = document.querySelectorAll('input[name="couleur"]');
+    let couleurChoisie = "";
 
-Email = Email.value
+    // Parcours les radios pour trouver celle qui est cochée
+    for (let i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        couleurChoisie = radios[i].value;
+        break; // On peut arrêter la boucle dès qu'on a trouvé la sélection
+      }
+    }
 
-console.log(nom.value, Email.value)
-
-check = check.checked
-console.log(check.checked)
-
-
-// var personne = {
-//     nom: ["Jean", "Martin"],
-//     age: 32,
-//     sexe: "masculin",
-//     interets: ["musique", "skier"],
-//     bio: function () {
-//       alert(
-//         this.nom[0] +
-//           " " +
-//           this.nom[1] +
-//           " a " +
-//           this.age +
-//           " ans. Il aime " +
-//           this.interets[0] +
-//           " et " +
-//           this.interets[1] +
-//           ".",
-//       );
-//     },
-//     salutation: function () {
-//       alert("Bonjour ! Je suis " + this.nom[0] + ".");
-//     },
-//   };
-
-//   console.log(personne.bio())
+    // Affiche les valeurs dans la console
+    console.log("Nom:", nom);
+    console.log("Email:", email);
+    console.log("Préférence de couleur:", couleurChoisie);
+    console.log("Checkbox:", checkbox ? "Coché" : "Non coché");
+    console.log("Choix dans le select:", select);
+    console.log("Message:", message);
+  });
+});
